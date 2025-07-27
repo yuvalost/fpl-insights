@@ -20,3 +20,4 @@ A full-stack analytics dashboard for Fantasy Premier League.
 
 ```bash
 docker-compose up --build
+# fpl-insights
