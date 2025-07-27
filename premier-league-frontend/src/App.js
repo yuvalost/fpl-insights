@@ -49,7 +49,7 @@ function App() {
   // Function to fetch teams
   const fetchTeams = useCallback(async () => {
     try {
-      const response = await fetch('/api/teams');
+      const response = await fetch('http://localhost:5000/api/teams');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

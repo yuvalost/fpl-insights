@@ -1,4 +1,4 @@
-version: '3.8'
+# version: '3.8'  # <- optional and obsolete, safe to remove
 
 services:
   db:
@@ -30,7 +30,7 @@ services:
       - "5000:5000"
     environment:
       DB_USER: ${DB_USER}
-      DB_HOST: db
+      DB_HOST: ${DB_HOST}
       DB_DATABASE: ${DB_DATABASE}
       DB_PASSWORD: ${DB_PASSWORD}
       DB_PORT: ${DB_PORT}
@@ -46,12 +46,14 @@ services:
     build:
       context: ./premier-league-frontend
       dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: http://backend:5000
     container_name: fpl_frontend
     restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
-      REACT_APP_API_URL: http://localhost:5000
+      REACT_APP_API_URL: http://backend:5000
     depends_on:
       backend:
         condition: service_started
