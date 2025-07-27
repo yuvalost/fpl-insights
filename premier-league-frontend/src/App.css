@@ -1,0 +1,118 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+}
+
+.App-header {
+  margin-bottom: 20px;
+}
+
+.filters-sort-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  background-color: #3a3f47;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filters, .sorting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+select, button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #61dafb;
+  background-color: #4a4f57;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+select:hover, button:hover {
+  background-color: #5a606a;
+}
+
+button.active {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+}
+
+.players-table-container {
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #3a3f47;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+th, td {
+  border: 1px solid #4a4f57;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+  cursor: pointer; /* Indicate sortable columns */
+}
+
+tr:nth-child(even) {
+  background-color: #31353b;
+}
+
+tr:hover {
+  background-color: #4a4f57;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
